@@ -1,0 +1,24 @@
+syntax = "proto2";
+
+package protobuf;
+
+option java_package = "wo.mq.protobuf";
+option java_outer_classname="QueueProtos";
+
+message Queue {
+    optional QueueHeader header=1;
+    repeated string content=2;
+}
+
+message QueueHeader{
+    enum QueueAction{
+        PUBLISH=1;
+        SUBSCRIPT=2;
+        UNSUBSCRIPT=3;
+        PUT=4;
+        GET=5;
+    }
+    required string queueName=1;
+    required QueueAction action=2;
+    optional string source=3;
+}
