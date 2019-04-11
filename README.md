@@ -1,7 +1,7 @@
 # wo-mq
 A simple message queue developed by Netty, SpringBoot,Redis and Protobuf, including wo-mq-server and wo-mq-client parts.
 
-## Techonoligies Choosed
+## Technoligies Choosed
 
 - [x] SpringBoot
 - [x] Netty
@@ -24,7 +24,7 @@ A simple message queue developed by Netty, SpringBoot,Redis and Protobuf, includ
 
 1. The message queue storage used is Redis, please ensure your Redis server is start up before run wo-mq-server.
 
-2. Add your Redis server configuration to wo-mq-server properties *./server-0.0.1-SNAPSHOT.jar/BOOT-INF/classes* likewise this:
+2. Add your Redis server configuration to wo-mq-server properties *./server-0.0.1-SNAPSHOT.jar/BOOT-INF/classes/application.properties* likewise this:
 
    ```properties
    spring.redis.host=192.168.3.20
