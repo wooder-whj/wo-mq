@@ -22,9 +22,18 @@ A simple message queue developed by Netty, SpringBoot,Redis and Protobuf, includ
 
 ### wo-mq-server
 
-1. The message queue storage used is Redis, please ensure your Redis server is up before run wo-mq-server.
+1. The message queue storage used is Redis, please ensure your Redis server is start up before run wo-mq-server.
 
-2. Run server using *jar -jar* as below:
+2. Add your Redis server configuration to wo-mq-server properties *./server-0.0.1-SNAPSHOT.jar/BOOT-INF/classes* likewise this:
+
+   ```properties
+   spring.redis.host=192.168.3.20
+   spring.redis.port=6379
+   ```
+
+   
+
+3. Run server using *jar -jar* as below:
 
    ```shell
    java -jar ./server/build/server-0.0.1-SNAPSHOT.jar [option]
@@ -36,7 +45,19 @@ A simple message queue developed by Netty, SpringBoot,Redis and Protobuf, includ
 
 1. Install  all libraies in the directory *./repository/* to your projec trepsoitory.
 
-2. The wo-mq-client provides the following actions for use as below:
+2. Introduce wo-mq-client dependency in your project pom.xml as below:
+
+   ```xml
+   <dependency>
+       <groupId>wo.mq</groupId>
+       <artifactId>client</artifactId>
+       <version>1.0-SNAPSHOT</version>
+   </dependency>
+   ```
+
+   
+
+3. The wo-mq-client provides the following actions for use as below:
 
    1. publish - create a queue using the given name and put message into the queue.
 
