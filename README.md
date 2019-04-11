@@ -24,14 +24,12 @@ A simple message queue developed by Netty, SpringBoot,Redis and Protobuf, includ
 
 1. The message queue storage used is Redis, please ensure your Redis server is start up before run wo-mq-server.
 
-2. Add your Redis server configuration to wo-mq-server properties *./server-0.0.1-SNAPSHOT.jar/BOOT-INF/classes/application.properties* likewise this:
+2. Add your Redis server connection information to wo-mq-server properties ./server-0.0.1-SNAPSHOT.jar/BOOT-INF/classes/application.properties likewise this:
 
    ```properties
-   spring.redis.host=192.168.3.20
-   spring.redis.port=6379
+      spring.redis.host=192.168.3.20
+      spring.redis.port=6379
    ```
-
-   
 
 3. Run server using *jar -jar* as below:
 
