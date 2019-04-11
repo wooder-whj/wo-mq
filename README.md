@@ -34,7 +34,7 @@ A simple message queue developed by Netty, SpringBoot,Redis and Protobuf, includ
 
 ### wo-mq-client
 
-1. Install  all libraies in the directory*./repository/* to your projec trepsoitory.
+1. Install  all libraies in the directory *./repository/* to your projec trepsoitory.
 
 2. The wo-mq-client provides the following actions for use as below:
 
